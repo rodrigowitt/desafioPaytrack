@@ -30,8 +30,6 @@ const criarTabelas = async () => {
     `);
   };
   
-  criarTabelas();
-  
   module.exports = {
     criarTabelas
   };

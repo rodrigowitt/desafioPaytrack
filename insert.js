@@ -1,8 +1,8 @@
 const pool = require('./database'); // Importa a conexão com o banco de dados
 
-const atualizados = {};      // Registra CPFs, CNPJs e centros de custo que foram atualizados
-const inseridos = {};        // Registra CPFs, CNPJs e centros de custo que foram inseridos
-const ignorados = {};        // Registra CPFs que foram ignorados devido a falta de dados
+const atualizados = {};      // Registra as chaves primárias foram atualizados
+const inseridos = {};        // Registra as chaves primárias foram inseridos
+const ignorados = {};        // Registra os CPFs que foram ignorados devido a falta de dados
 const inconsistencias = [];  // Lista que armazena mensagens de inconsistências e erros
 
 

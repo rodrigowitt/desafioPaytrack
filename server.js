@@ -15,7 +15,7 @@ app.listen(3000, () => {
 });
 
 // Cron para reiniciar a cada 15 minutos
-cron.schedule('*/1 * * * *', () => {
+cron.schedule('*/15 * * * *', () => {
   console.log('Iniciando verificação automática da API...');
   verificarApi();
 });

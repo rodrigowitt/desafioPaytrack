@@ -1,4 +1,4 @@
-const fs = require('fs'); // Importando o módulo fs para escrever no arquivo
+const fs = require('fs');
 
 // Função para gerar relatório no arquivo relatorio.txt
 const gerarRelatorio = (atualizacoesCount, insercoesCount, ignoradosCount, inconsistencias = []) => {
