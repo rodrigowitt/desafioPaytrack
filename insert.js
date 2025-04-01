@@ -1,9 +1,9 @@
-const pool = require('./database'); // Importa a conexão com o banco de dados
+const pool = require('./database');
 
-const atualizados = {};      // Registra as chaves primárias foram atualizados
-const inseridos = {};        // Registra as chaves primárias foram inseridos
-const ignorados = {};        // Registra os CPFs que foram ignorados devido a falta de dados
-const inconsistencias = [];  // Lista que armazena mensagens de inconsistências e erros
+const atualizados = {};      
+const inseridos = {};        
+const ignorados = {};        
+const inconsistencias = [];  
 
 
 // Função para buscar os dados da api 
@@ -27,7 +27,7 @@ const inserirDados = async (dados) => {
     return 
   }
 
-  // Início do bloco try para conexão com o banco
+
   const client = await pool.connect();
   try {
     await client.query('BEGIN');

@@ -1,13 +1,13 @@
 const express = require('express');
 const axios = require('axios');
 const cron = require('node-cron');
-const { inserirDados, atualizados, inseridos, ignorados, inconsistencias } = require('./insert'); // importa a função de inserirar dados, junto com os dados necessários para o relatório.
-const { criarTabelas } = require('./tables'); // Importa a função de criação das tabelas
-const { gerarRelatorio } = require('./report'); // Importa a função de gerar relatórios
+const { inserirDados, atualizados, inseridos, ignorados, inconsistencias } = require('./insert');
+const { criarTabelas } = require('./tables'); 
+const { gerarRelatorio } = require('./report'); 
 
 const app = express();
 
-// Ao iniciar na porta 3000, já executa a verificação da api
+
 app.listen(3000, () => {
   console.log('Servidor iniciado na porta 3000');
   criarTabelas();
@@ -33,7 +33,7 @@ async function verificarApi() {
       }
     });
 
-    // Percorrer todos os dados da api
+
     const dados = response.data;
     for (const dado of dados) {
       await inserirDados(dado);

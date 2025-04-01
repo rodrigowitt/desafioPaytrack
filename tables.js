@@ -1,6 +1,6 @@
 const pool = require ('./database')
 
-console.log('Verificando se as tabelas já existem, caso não existam serão inseridas.')
+console.log('Verificando se as tabelas já existem, caso não existam serão inseridas dentro do banco.')
 const criarTabelas = async () => {
     await pool.query(`
       CREATE TABLE IF NOT EXISTS empresas (
